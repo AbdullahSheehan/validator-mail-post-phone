@@ -4,7 +4,7 @@ document.getElementById("mail").addEventListener("click", () => {
 	valid.add("d-none");
 	invalid.add("d-none");
 	let input = prompt("Enter your Email:");
-	let regex = /^([a-zA-Z0-9]\.?)+([^\.])@([a-zA-Z0-9]\.?)+([^\.])$/;
+	let regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	if (regex.test(input)) {
 		valid.remove("d-none");
 	} else {
